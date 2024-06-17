@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Currículo</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Gerador de Currículo</h1>
+        <form action="generate_cv.php" method="post">
+            <div class="form-group">
+                <label for="name">Nome Completo:</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Telefone:</label>
+                <input type="tel" id="phone" name="phone" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Endereço:</label>
+                <input type="text" id="address" name="address" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="education">Educação:</label>
+                <textarea id="education" name="education" class="form-control" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="experience">Experiência Profissional:</label>
+                <div id="experience-container">
+                    <div class="experience-item mb-3">
+                        <textarea name="experience[]" class="form-control" rows="3" required></textarea>
+                    </div>
+                </div>
+                <button type="button" id="add-experience" class="btn btn-primary">+ Adicionar Experiência</button>
+            </div>
+            <div class="form-group">
+                <label for="references">Referências Pessoais:</label>
+                <div id="reference-container">
+                    <div class="reference-item mb-3">
+                        <input type="text" name="references[]" class="form-control" placeholder="Nome da Referência" required>
+                    </div>
+                </div>
+                <button type="button" id="add-reference" class="btn btn-primary">+ Adicionar Referência</button>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Gerar Currículo</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
