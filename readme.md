@@ -1,0 +1,1 @@
+Gerador de currículo em PHP com uma interfece em html/CSS que permite a entrada de dados para montagem do currículo. Utilizado o JS e JQuery para manipulação dinâmica dos campos de experiência e referência.O PHP coleta os dados do formulário para fazer a exibição dos mesmos.O CSS adiciona os estilos extras para melhorar  a aparência geral em conjunto com o Bootstrap.
